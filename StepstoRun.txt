@@ -1,2 +1,0 @@
-Step 1: Install these packages before running: pip install streamlit yfinance pandas numpy matplotlib plotly python-dotenv ta pytz requests
-Step 2: Run with : streamlit run app.py

@@ -1,0 +1,13 @@
+﻿1) Install libraries : pip install -r requirements.txt
+2) Navigate to file location using path, ex: "C:\Users\16822\Downloads\AI_Portfolio_Manager_V1.py"
+3) Run Application: streamlit run AI_Project_Manager_V1.py  
+If app doesn’t launch on browser, force port: streamlit run AI_Project_Manager_V1.py --server.port 8502
+
+
+Trouble Shoot: 
+If app doesn’t launch on browser, force port: 
+streamlit run AI_Project_Manager_V1.py --server.port 8502
+
+
+If Streamlit doesn’t work directly, specify Python module:
+python -m streamlit run AI_Project_Manager_V1.py

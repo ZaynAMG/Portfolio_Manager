@@ -1,0 +1,10 @@
+﻿streamlit
+yfinance
+pandas
+numpy
+matplotlib
+plotly
+python-dotenv
+ta
+pytz
+requests

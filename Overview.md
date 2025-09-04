@@ -1,1 +1,0 @@
-AI Portfolio Manager with Portfolio allocation representation of stock holdings, Real Time Price Action Stock Analysis (Charts with Indicators with Market Cap, Volume, Pivot Prices), Fear & Greed Index, Trading Interface Integration, Stock News and All Time Transaction Log 

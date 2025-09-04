@@ -31,7 +31,7 @@ if 'cash' not in st.session_state:
 if 'transaction_history' not in st.session_state:
     st.session_state.transaction_history = []
 
-# Process data to ensure it is timezone-aware and has the correct format by checking for current timezone converts all to Eastern time and make sure it appears on column 
+# Process stock history data to ensure it is timezone-aware and has the correct format by checking for current timezone converts all to Eastern time and make sure it appears on column 
 def process_data(data):
     if data.index.tzinfo is None:
         data.index = data.index.tz_localize('UTC')
@@ -472,13 +472,16 @@ def main():
       
         search_query = st.text_input("Enter stock ticker symbol (e.g., AAPL, TSLA, GOOGL)", "AAPL").upper()
 
-        if search_query:
+        if get_current_price(search_query) is not None:
             st.subheader(f"News for {search_query}")
 
             with st.spinner("Getting news..."):
+                
+                    
                 try:
                     # Get basic stock info
                     stock = yf.Ticker(search_query)
+                    
                     info = stock.info
                     company_name = info.get('longName', search_query)
 
@@ -543,7 +546,7 @@ def main():
                     st.info("💡 Try popular symbols like: AAPL, TSLA, MSFT, GOOGL, AMZN, NVDA")
 
         else:
-            st.info("👆 Enter a stock ticker symbol above to see news links and resources")
+            st.info("👆 The ticker symbol may be invalid. Enter a stock ticker symbol below to see news links and resources")
             st.write("""
             **Popular tickers to try:**
             - **NVDA** - NVIDIA
